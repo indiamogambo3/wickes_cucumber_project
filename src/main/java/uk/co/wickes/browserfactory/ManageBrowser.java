@@ -12,7 +12,7 @@ import uk.co.wickes.propertyreader.PropertyReader;
 import java.time.Duration;
 
 /**
- * Created by Jay Vaghani
+ * Created by Jaydeep Patel
  */
 public class ManageBrowser {
 
