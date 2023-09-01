@@ -21,5 +21,4 @@ public class Hooks extends Utility {
     public void tearDown() {
         closeBrowser();
     }
-
 }

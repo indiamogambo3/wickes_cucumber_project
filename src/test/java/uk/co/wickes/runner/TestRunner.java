@@ -1,13 +1,13 @@
 package uk.co.wickes.runner;
 
 import com.cucumber.listener.Reporter;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
 /**
- * Created by Jay Vaghani
+ * Created by Jaydeep Patel
  */
 
 @RunWith(Cucumber.class)
@@ -17,7 +17,6 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",
                 "json:target/RunCuke/cucumber.json"}
-
 )
 public class TestRunner {
 
@@ -28,12 +27,9 @@ public class TestRunner {
         Reporter.loadXMLConfig(reportConfigPath);
         Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
         Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
-        Reporter.setSystemInfo("Machine", "Windows 10 " + " 64 Bit");
+        Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");
         Reporter.setSystemInfo("Selenium", "4.10.0");
         Reporter.setSystemInfo("Maven", "3.5.9");
         Reporter.setSystemInfo("Java Version", "1.8.0_151");
     }
-
-    }
-
-
+}
